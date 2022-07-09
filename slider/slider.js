@@ -18,9 +18,10 @@ function updateTabCount(){
     chrome.tabs.query({
     }, function(tabs) {
         console.log(tabs);
-        changeHTML("open-tabs", "Tabs open: "+tabs.length)
         // update slider range
-        getHTML("tab-slider").max = tabs.length
+        console.log(tabs.length)
+        getHTML("tab-slider").max = tabs.length - 1 // -1 because popup counts as tab? not sure
+        console.log(getHTML("tab-slider").max)
 
         // update/set current tab value
         var currentTabNum = tabs.filter(function(active){
