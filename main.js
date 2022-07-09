@@ -19,15 +19,15 @@ function updateTabCount(){
     }, function(tabs) {
         console.log(tabs);
         changeHTML("open-tabs", "Tabs open: "+tabs.length)
-        // update slider range
-        getHTML("tab-slider").max = tabs.length
 
         // update/set current tab value
         var currentTabNum = tabs.filter(function(active){
             return active.active //gets current active tab
         })
-        getHTML("tab-slider").value = currentTabNum[0].index + 1
-        changeHTML("current-tab-num", "Current tab number: " + getHTML("tab-slider").value)
+        
+        currentTabNum = currentTabNum[0].index + 1
+
+        changeHTML("current-tab-num", "Current tab number: " + currentTabNum)
 
 
     });
