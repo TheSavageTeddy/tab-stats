@@ -6,7 +6,7 @@ function getHTML(id){
 }
   
 function changeHTML(id, text){
-    document.getElementById(id).innerHTML = text
+    document.getElementById(id).textContent = text
 }
 
 

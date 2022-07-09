@@ -8,10 +8,14 @@
     <script type="text/javascript" src="slider.js"></script>
     <link rel="stylesheet" href="slider.css">
 
-    <title>Tab Info</title>
+    <title>Tab Slider</title>
 </head>
 <body>
     <p id="current-tab-num">Current tab number: </p>
-    <input id="tab-slider" type="range" min="1" max="10" value="1" class="slider" >
+    <span id="slider-span">
+        <span>1</span>
+        <input id="tab-slider" type="range" min="1" max="10" value="1" class="slider">
+        <span id="max-value">10</span>
+    </span>
 </body>
 </html>
